@@ -3,34 +3,66 @@ import { RoleCard } from '../models/role-card.model';
 export const ROLE_CARDS: RoleCard[] = [
   {
     roleKey: 'manager',
-    title: 'Product Engineering Manager',
-    desc: "The 'CEO' of the technical product. Accountable for delivery, quality, and operational health. Owns the MSP relationship.",
-    color: 'bg-blue-100 border-blue-500 text-blue-800',
+    title: 'Manager',
+    desc: 'Product Engineering Manager who oversees the entire product team structure including technical leads, embedded resources, and all three operational teams (Build, Run/Sustain, and Implementation).',
+    color: 'bg-red-100 border-red-500 text-red-800',
     order: 1,
     parentTabId: 'structure'
   },
   {
-    roleKey: 'pm',
-    title: 'Product Manager (Business)',
-    desc: "Reports to Business. Defines the 'What' and 'Why'. Aligned 1:1 with the IT Product Team. Strategic Partner.",
-    color: 'bg-green-100 border-green-500 text-green-800',
+    roleKey: 'tech_lead',
+    title: 'Technical Lead(s)',
+    desc: 'Technical leaders who guide architecture, technical decisions, and development standards across the product teams.',
+    color: 'bg-gray-100 border-gray-500 text-gray-800',
     order: 2,
     parentTabId: 'structure'
   },
   {
-    roleKey: 'ba_qa',
-    title: 'Dedicated BAs & QAs',
-    desc: 'Report to Engineering Manager. 100% dedicated to the product. No context switching. Deep domain expertise.',
-    color: 'bg-purple-100 border-purple-500 text-purple-800',
+    roleKey: 'embedded_pm',
+    title: 'Embedded PM(s)',
+    desc: 'Product Managers embedded within the product team to define requirements, prioritize features, and align with business stakeholders.',
+    color: 'bg-gray-100 border-gray-500 text-gray-800',
     order: 3,
     parentTabId: 'structure'
   },
   {
-    roleKey: 'msp',
-    title: 'Managed Service (Run)',
-    desc: 'External partner executing Run & Sustain. Accountable to the Eng Manager. Can be replaced if performance lags.',
-    color: 'bg-orange-100 border-orange-500 text-orange-800',
+    roleKey: 'embedded_ba',
+    title: 'Embedded BA(s)',
+    desc: 'Business Analysts embedded in the team to gather requirements, document processes, and bridge technical and business needs.',
+    color: 'bg-gray-100 border-gray-500 text-gray-800',
     order: 4,
+    parentTabId: 'structure'
+  },
+  {
+    roleKey: 'embedded_qa',
+    title: 'Embedded QA(s)',
+    desc: 'Quality Assurance professionals embedded in the team to ensure quality standards, test coverage, and product reliability.',
+    color: 'bg-gray-100 border-gray-500 text-gray-800',
+    order: 5,
+    parentTabId: 'structure'
+  },
+  {
+    roleKey: 'build_team',
+    title: 'Build Team',
+    desc: 'Development team responsible for building new features, enhancements, and greenfield product development.',
+    color: 'bg-red-100 border-red-400 text-red-800',
+    order: 6,
+    parentTabId: 'structure'
+  },
+  {
+    roleKey: 'run_sustain_team',
+    title: 'Run/Sustain Team',
+    desc: 'Operations team managing production support, system maintenance, incident response, and ongoing sustainability of live products.',
+    color: 'bg-blue-100 border-blue-400 text-blue-800',
+    order: 7,
+    parentTabId: 'structure'
+  },
+  {
+    roleKey: 'implementation_team',
+    title: 'Implementation Team',
+    desc: 'Team responsible for client onboarding, product configuration, deployment, and successful implementation of solutions.',
+    color: 'bg-green-100 border-green-400 text-green-800',
+    order: 8,
     parentTabId: 'structure'
   }
 ];

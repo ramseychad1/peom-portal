@@ -1,57 +1,125 @@
-<div class="max-w-4xl mx-auto py-8">
-  <!-- Top Level: Business PM -->
-  <div class="flex flex-col items-center mb-8">
-    <div
-      *ngIf="roles['pm']"
-      (click)="openRoleDetail('pm')"
-      [class]="roles['pm'].color"
-      class="org-node max-w-xs border-2 border-dashed"
-    >
-      <p class="font-semibold text-sm">{{ roles['pm'].title }}</p>
-      <p class="text-xs mt-1 opacity-75">Reports to Business</p>
-    </div>
-    <!-- Vertical Line Down -->
-    <div class="org-line-vertical h-8"></div>
-  </div>
-
-  <!-- Middle Level: Engineering Manager -->
-  <div class="flex flex-col items-center mb-8">
+<div class="max-w-5xl mx-auto py-8 border-2 border-dashed border-gray-400 rounded-lg p-8">
+  <!-- Top Level: Manager -->
+  <div class="flex flex-col items-center mb-6">
     <div
       *ngIf="roles['manager']"
       (click)="openRoleDetail('manager')"
       [class]="roles['manager'].color"
-      class="org-node max-w-xs border-4"
+      class="org-node max-w-md border-2"
     >
-      <p class="font-bold text-sm">{{ roles['manager'].title }}</p>
-      <p class="text-xs mt-1 font-semibold">You</p>
+      <p class="font-bold text-base">{{ roles['manager'].title }}</p>
     </div>
     <!-- Vertical Line Down -->
-    <div class="org-line-vertical h-8"></div>
+    <div class="org-line-vertical h-12"></div>
   </div>
 
-  <!-- Bottom Level: BAs/QAs and MSP -->
-  <div class="flex justify-center gap-8">
-    <div class="flex flex-col items-center">
+  <!-- Second Level: 2x2 Grid of Embedded Roles -->
+  <div class="grid grid-cols-2 gap-4 max-w-4xl mx-auto mb-6">
+    <!-- Left Column -->
+    <div class="space-y-4">
       <div
-        *ngIf="roles['ba_qa']"
-        (click)="openRoleDetail('ba_qa')"
-        [class]="roles['ba_qa'].color"
-        class="org-node w-48 border-2"
+        *ngIf="roles['tech_lead']"
+        (click)="openRoleDetail('tech_lead')"
+        [class]="roles['tech_lead'].color"
+        class="org-node border-2"
       >
-        <p class="font-semibold text-sm">{{ roles['ba_qa'].title }}</p>
-        <p class="text-xs mt-1 opacity-75">Reports to You</p>
+        <p class="font-semibold text-sm">{{ roles['tech_lead'].title }}</p>
+      </div>
+      <div
+        *ngIf="roles['embedded_pm']"
+        (click)="openRoleDetail('embedded_pm')"
+        [class]="roles['embedded_pm'].color"
+        class="org-node border-2"
+      >
+        <p class="font-semibold text-sm">{{ roles['embedded_pm'].title }}</p>
       </div>
     </div>
 
-    <div class="flex flex-col items-center">
+    <!-- Right Column -->
+    <div class="space-y-4">
       <div
-        *ngIf="roles['msp']"
-        (click)="openRoleDetail('msp')"
-        [class]="roles['msp'].color"
-        class="org-node w-48 border-2 border-dashed"
+        *ngIf="roles['embedded_ba']"
+        (click)="openRoleDetail('embedded_ba')"
+        [class]="roles['embedded_ba'].color"
+        class="org-node border-2"
       >
-        <p class="font-semibold text-sm">{{ roles['msp'].title }}</p>
-        <p class="text-xs mt-1 opacity-75">External Partner</p>
+        <p class="font-semibold text-sm">{{ roles['embedded_ba'].title }}</p>
+      </div>
+      <div
+        *ngIf="roles['embedded_qa']"
+        (click)="openRoleDetail('embedded_qa')"
+        [class]="roles['embedded_qa'].color"
+        class="org-node border-2"
+      >
+        <p class="font-semibold text-sm">{{ roles['embedded_qa'].title }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vertical Line Down -->
+  <div class="flex flex-col items-center mb-6">
+    <div class="org-line-vertical h-12"></div>
+  </div>
+
+  <!-- Bottom Level: 3 Teams Horizontally -->
+  <div class="grid grid-cols-3 gap-4 max-w-4xl mx-auto">
+    <div
+      *ngIf="roles['build_team']"
+      (click)="openRoleDetail('build_team')"
+      [class]="roles['build_team'].color"
+      class="org-node border-2"
+    >
+      <p class="font-semibold text-sm">{{ roles['build_team'].title }}</p>
+      <div class="flex justify-center gap-1 mt-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+        </svg>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+        </svg>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+        </svg>
+      </div>
+    </div>
+
+    <div
+      *ngIf="roles['run_sustain_team']"
+      (click)="openRoleDetail('run_sustain_team')"
+      [class]="roles['run_sustain_team'].color"
+      class="org-node border-2"
+    >
+      <p class="font-semibold text-sm">{{ roles['run_sustain_team'].title }}</p>
+      <div class="flex justify-center gap-1 mt-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+        </svg>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+        </svg>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+        </svg>
+      </div>
+    </div>
+
+    <div
+      *ngIf="roles['implementation_team']"
+      (click)="openRoleDetail('implementation_team')"
+      [class]="roles['implementation_team'].color"
+      class="org-node border-2"
+    >
+      <p class="font-semibold text-sm">{{ roles['implementation_team'].title }}</p>
+      <div class="flex justify-center gap-1 mt-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+        </svg>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+        </svg>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+        </svg>
       </div>
     </div>
   </div>
