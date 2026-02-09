@@ -14,19 +14,38 @@ import { DataService } from '../../../../services/data.service';
 export class RadarChartComponent implements OnInit {
   public radarChartOptions: ChartConfiguration<'radar'>['options'] = {
     responsive: true,
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
+    layout: {
+      padding: {
+        top: 10,
+        bottom: 5,
+        left: 20,
+        right: 20
+      }
+    },
     scales: {
       r: {
         beginAtZero: true,
         max: 100,
         ticks: {
-          stepSize: 20
+          stepSize: 20,
+          font: {
+            size: 11
+          }
         }
       }
     },
     plugins: {
       legend: {
-        position: 'bottom'
+        position: 'bottom',
+        align: 'center',
+        labels: {
+          font: {
+            size: 12
+          },
+          padding: 6,
+          boxWidth: 30
+        }
       }
     }
   };
