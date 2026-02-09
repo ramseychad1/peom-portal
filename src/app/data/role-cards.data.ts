@@ -43,24 +43,24 @@ export const ROLE_CARDS: RoleCard[] = [
   },
   {
     roleKey: 'build_team',
-    title: 'Build Team',
-    desc: 'Development team responsible for building new features, enhancements, and greenfield product development.',
+    title: 'Build Function',
+    desc: 'Team members responsible for building new features, enhancements, and greenfield product development.',
     color: 'bg-red-100 border-red-400 text-red-800',
     order: 6,
     parentTabId: 'structure'
   },
   {
     roleKey: 'run_sustain_team',
-    title: 'Run/Sustain Team',
-    desc: 'Operations team managing production support, system maintenance, incident response, and ongoing sustainability of live products.',
+    title: 'Run/Sustain Function',
+    desc: 'Team members responsible for production support, system maintenance, incident response, and ongoing sustainability of live products.',
     color: 'bg-blue-100 border-blue-400 text-blue-800',
     order: 7,
     parentTabId: 'structure'
   },
   {
     roleKey: 'implementation_team',
-    title: 'Implementation Team',
-    desc: 'Team responsible for client onboarding, product configuration, deployment, and successful implementation of solutions.',
+    title: 'Implementation Function',
+    desc: 'Team members responsible for client onboarding, product configuration, deployment, and successful implementation of solutions. ',
     color: 'bg-green-100 border-green-400 text-green-800',
     order: 8,
     parentTabId: 'structure'
