@@ -29,5 +29,5 @@ COPY --from=build /app/dist/peom-portal/browser ./browser
 # Expose port (Railway will assign the PORT env variable)
 EXPOSE 3000
 
-# Start the application
-CMD ["serve", "-s", "browser", "-l", "3000"]
+# Start the application - serve will use PORT env variable automatically
+CMD ["serve", "-s", "browser"]
