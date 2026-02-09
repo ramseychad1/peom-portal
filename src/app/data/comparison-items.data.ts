@@ -3,14 +3,14 @@ import { ComparisonItem } from '../models/comparison-item.model';
 export const COMPARISON_ITEMS: ComparisonItem[] = [
   {
     dimension: 'Scope',
-    old: 'Dev & Build Only',
+    old: 'Dev & Implementation Only',
     new: 'End-to-End (Build, Imp, Run)',
     order: 1,
     parentTabId: 'vision'
   },
   {
     dimension: 'Success Metric',
-    old: 'On-time Delivery',
+    old: ' On-time Delivery',
     new: 'Product Health & Client Value',
     order: 2,
     parentTabId: 'vision'
