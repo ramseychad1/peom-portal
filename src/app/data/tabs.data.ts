@@ -5,7 +5,7 @@ export const TABS: TabSection[] = [
     tabId: 'vision',
     tabLabel: 'Vision & Shift',
     title: 'The Shift: Project to Product',
-    intro: "We are moving away from a siloed 'build and hand-off' approach. In the new model, Product Engineering Managers own the entire lifespan of the product family.",
+    intro: "We are moving away from a siloed 'build and hand-off' approach. In the new model, Product Pods own the entire lifecycle of the product family.",
     order: 1,
     contentType: 'comparison'
   },
@@ -13,7 +13,7 @@ export const TABS: TabSection[] = [
     tabId: 'structure',
     tabLabel: 'Team Structure',
     title: 'The Product Pod Structure',
-    intro: 'We are consolidating 15 products into 7 Product Families. Each family is led by a Product Engineering Manager with a dedicated cross-functional team.',
+    intro: 'We are consolidating our suite of products into Product Families referred to as Product Pods. Each Product Pod is led by a Product Engineering Manager with a dedicated cross-functional team.',
     order: 2,
     contentType: 'orgChart'
   },
