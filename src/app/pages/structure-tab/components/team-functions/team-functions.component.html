@@ -1,0 +1,51 @@
+<div class="max-w-6xl mx-auto">
+  <!-- Product Team Header -->
+  <div class="bg-red-500 text-white text-center py-4 mb-1">
+    <h2 class="text-2xl font-bold">Product Team</h2>
+  </div>
+
+  <!-- Three Team Columns -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+    <div *ngFor="let team of teams" [class]="team.color" class="p-6 border-2">
+      <!-- Team Title with Icons -->
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-xl font-bold">{{ team.title }}</h3>
+        <div class="flex gap-1">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- HL Activities Section -->
+      <div class="mb-6">
+        <h4 class="font-bold text-sm mb-2 underline">HL Activities</h4>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li *ngFor="let activity of team.hlActivities">{{ activity }}</li>
+        </ul>
+      </div>
+
+      <!-- Resource Management Section -->
+      <div class="mb-6">
+        <h4 class="font-bold text-sm mb-2 underline">Resource Management</h4>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li *ngFor="let resource of team.resourceManagement">{{ resource }}</li>
+        </ul>
+      </div>
+
+      <!-- Primary Business Partners Section -->
+      <div>
+        <h4 class="font-bold text-sm mb-2 underline">Primary Business Partners</h4>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li *ngFor="let partner of team.primaryBusinessPartners">{{ partner }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

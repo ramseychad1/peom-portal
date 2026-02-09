@@ -1,1 +1,21 @@
-/* Component-specific styles if needed */
+.subtab-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.active-subtab {
+  color: #2563EB;
+  border-bottom-color: #2563EB;
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+.inactive-subtab {
+  color: #6B7280;
+}
+
+.inactive-subtab:hover {
+  color: #374151;
+  background-color: rgba(107, 114, 128, 0.05);
+}

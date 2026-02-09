@@ -8,6 +8,7 @@ import { RoleCard } from '../models/role-card.model';
 import { LifecycleStep } from '../models/lifecycle-step.model';
 import { MSPPoint } from '../models/msp-point.model';
 import { MSPOversightItem } from '../models/msp-oversight-item.model';
+import { TeamFunction } from '../models/team-function.model';
 
 import { PAGE_CONFIG } from '../data/page-config.data';
 import { TABS } from '../data/tabs.data';
@@ -17,6 +18,7 @@ import { ROLE_CARDS } from '../data/role-cards.data';
 import { LIFECYCLE_STEPS } from '../data/lifecycle-steps.data';
 import { MSP_POINTS } from '../data/msp-points.data';
 import { MSP_OVERSIGHT_ITEMS } from '../data/msp-oversight-items.data';
+import { TEAM_FUNCTIONS } from '../data/team-functions.data';
 
 @Injectable({
   providedIn: 'root'
@@ -58,6 +60,11 @@ export class DataService {
 
   getMSPOversightItems(tabId: string): Observable<MSPOversightItem[]> {
     return of(MSP_OVERSIGHT_ITEMS.filter(item => item.parentTabId === tabId)
+      .sort((a, b) => a.order - b.order));
+  }
+
+  getTeamFunctions(tabId: string): Observable<TeamFunction[]> {
+    return of(TEAM_FUNCTIONS.filter(item => item.parentTabId === tabId)
       .sort((a, b) => a.order - b.order));
   }
 }
