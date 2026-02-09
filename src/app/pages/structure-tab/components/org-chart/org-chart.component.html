@@ -1,0 +1,58 @@
+<div class="max-w-4xl mx-auto py-8">
+  <!-- Top Level: Business PM -->
+  <div class="flex flex-col items-center mb-8">
+    <div
+      *ngIf="roles['pm']"
+      (click)="openRoleDetail('pm')"
+      [class]="roles['pm'].color"
+      class="org-node max-w-xs border-2 border-dashed"
+    >
+      <p class="font-semibold text-sm">{{ roles['pm'].title }}</p>
+      <p class="text-xs mt-1 opacity-75">Reports to Business</p>
+    </div>
+    <!-- Vertical Line Down -->
+    <div class="org-line-vertical h-8"></div>
+  </div>
+
+  <!-- Middle Level: Engineering Manager -->
+  <div class="flex flex-col items-center mb-8">
+    <div
+      *ngIf="roles['manager']"
+      (click)="openRoleDetail('manager')"
+      [class]="roles['manager'].color"
+      class="org-node max-w-xs border-4"
+    >
+      <p class="font-bold text-sm">{{ roles['manager'].title }}</p>
+      <p class="text-xs mt-1 font-semibold">You</p>
+    </div>
+    <!-- Vertical Line Down -->
+    <div class="org-line-vertical h-8"></div>
+  </div>
+
+  <!-- Bottom Level: BAs/QAs and MSP -->
+  <div class="flex justify-center gap-8">
+    <div class="flex flex-col items-center">
+      <div
+        *ngIf="roles['ba_qa']"
+        (click)="openRoleDetail('ba_qa')"
+        [class]="roles['ba_qa'].color"
+        class="org-node w-48 border-2"
+      >
+        <p class="font-semibold text-sm">{{ roles['ba_qa'].title }}</p>
+        <p class="text-xs mt-1 opacity-75">Reports to You</p>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div
+        *ngIf="roles['msp']"
+        (click)="openRoleDetail('msp')"
+        [class]="roles['msp'].color"
+        class="org-node w-48 border-2 border-dashed"
+      >
+        <p class="font-semibold text-sm">{{ roles['msp'].title }}</p>
+        <p class="text-xs mt-1 opacity-75">External Partner</p>
+      </div>
+    </div>
+  </div>
+</div>

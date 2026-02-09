@@ -1,0 +1,16 @@
+.badge {
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-green {
+  background-color: #10B981;
+  color: white;
+}
+
+.badge-blue {
+  background-color: #3B82F6;
+  color: white;
+}

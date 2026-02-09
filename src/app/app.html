@@ -1,0 +1,15 @@
+<div class="bg-slate-50 min-h-screen flex flex-col">
+  <app-header></app-header>
+
+  <app-tab-navigation></app-tab-navigation>
+
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+    <app-intro-section></app-intro-section>
+
+    <div class="bg-white rounded-xl card-shadow min-h-[600px] overflow-hidden">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,17 @@
+<div class="p-8 animate-fade-in">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <!-- Left Column: Text & Table -->
+    <div class="space-y-6">
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-3">{{ tabData?.title }}</h2>
+        <p class="text-gray-600 leading-relaxed">{{ tabData?.intro }}</p>
+      </div>
+      <app-comparison-table></app-comparison-table>
+    </div>
+
+    <!-- Right Column: Chart -->
+    <div class="flex items-center justify-center">
+      <app-radar-chart></app-radar-chart>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="bg-white border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex space-x-8 h-12 overflow-x-auto">
+      <a
+        *ngFor="let tab of tabs"
+        [routerLink]="['/', tab.tabId]"
+        routerLinkActive="tab-active"
+        #rla="routerLinkActive"
+        [class]="rla.isActive ? 'tab-active' : 'tab-inactive'"
+        class="nav-item flex items-center px-3 text-sm font-medium cursor-pointer whitespace-nowrap"
+      >
+        {{ tab.tabLabel }}
+      </a>
+    </div>
+  </div>
+</div>

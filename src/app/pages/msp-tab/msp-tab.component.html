@@ -1,0 +1,34 @@
+<div class="p-8 animate-fade-in">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <!-- Left Column: Key Points -->
+    <div class="space-y-6">
+      <div class="bg-orange-100 border-l-4 border-orange-500 p-4 rounded">
+        <p class="text-xs font-bold text-orange-800 uppercase tracking-wide">CRITICAL CHANGE</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-3">{{ tabData?.title }}</h2>
+        <p class="text-gray-600 leading-relaxed mb-6">{{ tabData?.intro }}</p>
+      </div>
+
+      <div class="space-y-4">
+        <div *ngFor="let point of mspPoints" class="flex gap-4">
+          <div class="flex-shrink-0">
+            <div class="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-1">{{ point.title }}</h3>
+            <p class="text-sm text-gray-600">{{ point.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Oversight Model -->
+    <app-oversight-model></app-oversight-model>
+  </div>
+</div>
