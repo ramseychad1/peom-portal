@@ -3,10 +3,18 @@ import { RoleCard } from '../models/role-card.model';
 export const ROLE_CARDS: RoleCard[] = [
   {
     roleKey: 'manager',
-    title: 'Manager',
+    title: 'Engineering Manager',
     desc: 'Product Engineering Manager who oversees the entire product team structure including technical leads, embedded resources, and all three operational teams (Build, Run/Sustain, and Implementation).',
     color: 'bg-red-100 border-red-500 text-red-800',
     order: 1,
+    parentTabId: 'structure'
+  },
+  {
+    roleKey: 'product_manager',
+    title: 'Product Manager (Business)',
+    desc: 'Business Product Manager who partners with the Product Engineering Manager. Together they are responsible for the overall success of the product family. Defines the "What" and "Why" while collaborating on the "How".',
+    color: 'bg-green-100 border-green-500 text-green-800',
+    order: 2,
     parentTabId: 'structure'
   },
   {
@@ -52,7 +60,7 @@ export const ROLE_CARDS: RoleCard[] = [
   {
     roleKey: 'run_sustain_team',
     title: 'Run/Sustain Function',
-    desc: 'Team members responsible for production support, system maintenance, incident response, and ongoing sustainability of live products.',
+    desc: 'Team members responsible for production support, system maintenance, incident response, and ongoing sustainability of live products.  This function may be embedded or performed by a Managed Service Partner.',
     color: 'bg-blue-100 border-blue-400 text-blue-800',
     order: 7,
     parentTabId: 'structure'
@@ -60,7 +68,7 @@ export const ROLE_CARDS: RoleCard[] = [
   {
     roleKey: 'implementation_team',
     title: 'Implementation Function',
-    desc: 'Team members responsible for client onboarding, product configuration, deployment, and successful implementation of solutions. ',
+    desc: 'Team members responsible for client onboarding, product configuration, deployment, and successful implementation of solutions',
     color: 'bg-green-100 border-green-400 text-green-800',
     order: 8,
     parentTabId: 'structure'

@@ -13,7 +13,7 @@ export const TABS: TabSection[] = [
     tabId: 'structure',
     tabLabel: 'Team Structure',
     title: 'The Product Pod Structure',
-    intro: 'We are consolidating our suite of products into Product Families referred to as Product Pods. Each Product Pod is led by a Product Engineering Manager with a dedicated cross-functional team.',
+    intro: 'We are consolidating our suite of products into Product Families referred to as Product Pods. Each Product Pod is led by a Product Engineering Manager with a dedicated cross-functional team.  The Product Engineering manager will be vertically aligned with a corresponding Product Manager partner.  Together, the Product Manager and Product Engineering Manager will be responsible for the overall success of the product family.',
     order: 2,
     contentType: 'orgChart'
   },

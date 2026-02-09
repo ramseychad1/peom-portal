@@ -1,15 +1,34 @@
 <div class="max-w-5xl mx-auto py-8 border-2 border-dashed border-gray-400 rounded-lg p-8">
-  <!-- Top Level: Manager -->
-  <div class="flex flex-col items-center mb-6">
-    <div
-      *ngIf="roles['manager']"
-      (click)="openRoleDetail('manager')"
-      [class]="roles['manager'].color"
-      class="org-node max-w-md border-2"
-    >
-      <p class="font-bold text-base">{{ roles['manager'].title }}</p>
+  <!-- Top Level: Engineering Manager (centered) with Product Manager to the right -->
+  <div class="relative flex flex-col items-center mb-6">
+    <div class="flex items-center justify-center gap-0 mb-6 relative">
+      <!-- Engineering Manager (Centered, Wider) -->
+      <div
+        *ngIf="roles['manager']"
+        (click)="openRoleDetail('manager')"
+        [class]="roles['manager'].color"
+        class="org-node border-2 px-12 py-4 w-80"
+      >
+        <p class="font-bold text-lg">{{ roles['manager'].title }}</p>
+      </div>
+
+      <!-- Dotted Line to Product Manager (Peer Relationship) -->
+      <div class="absolute left-full ml-2 flex items-center">
+        <div class="w-12 border-t-2 border-dashed border-gray-400"></div>
+
+        <!-- Product Manager (Off to the right) -->
+        <div
+          *ngIf="roles['product_manager']"
+          (click)="openRoleDetail('product_manager')"
+          [class]="roles['product_manager'].color"
+          class="org-node border-2 border-dashed w-56 ml-2"
+        >
+          <p class="font-semibold text-sm">{{ roles['product_manager'].title }}</p>
+        </div>
+      </div>
     </div>
-    <!-- Vertical Line Down -->
+
+    <!-- Vertical Line Down from Engineering Manager -->
     <div class="org-line-vertical h-12"></div>
   </div>
 
